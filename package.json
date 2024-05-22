@@ -1,0 +1,8 @@
+{
+	"name": "@blazes/sudoku-mono",
+	"private": true,
+	"scripts": {},
+	"devDependencies": {
+		"turbo": "latest"
+	}
+}
