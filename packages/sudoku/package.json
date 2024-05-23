@@ -1,0 +1,29 @@
+{
+	"name": "@blazes/sudoku",
+	"version": "0.0.0",
+	"description": "",
+	"author": "Blaze Shomida",
+	"keywords": [],
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			}
+		}
+	},
+	"scripts": {
+		"build": "NODE_ENV=production tsup",
+		"dev": "NODE_ENV=development tsup"
+	},
+
+	"devDependencies": {
+		"@types/node": "^20.12.12",
+		"tsup": "^8.0.2",
+		"typescript": "^5.4.5"
+	}
+}
