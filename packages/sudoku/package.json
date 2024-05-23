@@ -1,32 +1,37 @@
 {
-	"name": "@blazes/sudoku",
-	"version": "0.0.0",
-	"description": "",
-	"author": "Blaze Shomida",
-	"keywords": [],
-	"license": "MIT",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"type": "module",
-	"exports": {
-		".": {
-			"import": {
-				"default": "./dist/index.js",
-				"types": "./dist/index.d.ts"
-			}
-		}
-	},
-	"scripts": {
-		"build": "NODE_ENV=production tsup",
-		"dev": "NODE_ENV=development tsup",
-		"format": "biome format --write .",
-		"lint": "biome lint --apply .",
-		"check": "biome check --apply ."
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.7.3",
-		"@types/node": "^20.12.12",
-		"tsup": "^8.0.2",
-		"typescript": "^5.4.5"
-	}
+  "name": "@blazes/sudoku",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Blaze Shomida",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsup",
+    "dev": "NODE_ENV=development tsup",
+    "format": "biome format --write .",
+    "lint": "biome lint --apply .",
+    "check": "biome check --apply ."
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+      "biome check --apply --no-errors-on-unmatched"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/node": "^20.12.12",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
 }
