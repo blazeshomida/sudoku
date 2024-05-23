@@ -1,8 +1,15 @@
 {
 	"name": "@blazes/sudoku-mono",
 	"private": true,
-	"scripts": {},
+	"scripts": {
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*": []
+	},
 	"devDependencies": {
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.4",
 		"turbo": "latest"
 	}
 }
