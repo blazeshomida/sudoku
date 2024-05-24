@@ -11,14 +11,16 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./dist/index.js",
-        "types": "./dist/index.d.ts"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
   "scripts": {
     "build": "NODE_ENV=production tsup",
     "dev": "NODE_ENV=development tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "biome format --write .",
     "lint": "biome lint --apply .",
     "check": "biome check --apply ."
@@ -32,6 +34,7 @@
     "@biomejs/biome": "1.7.3",
     "@types/node": "^20.12.12",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
