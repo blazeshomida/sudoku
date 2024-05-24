@@ -23,7 +23,8 @@
     "test:watch": "vitest",
     "format": "biome format --write .",
     "lint": "biome lint --apply .",
-    "check": "biome check --apply ."
+    "check": "biome check --apply .",
+    "biome:ci": "biome ci ."
   },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [

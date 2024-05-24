@@ -3,10 +3,12 @@
   "extends": ["//"],
   "pipeline": {
     "build": {
+      "dependsOn": ["test"],
       "outputs": ["dist/**"],
       "inputs": ["src/**/*.ts"]
     },
     "test": {
+      "dependsOn": ["^build"],
       "inputs": ["tests/**/*.test.ts"]
     }
   }
